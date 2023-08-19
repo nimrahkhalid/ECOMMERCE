@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "checkOut";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Cart>
+<div class="container mt-3">
+    <h2>Check Out Product</h2>
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <input type="text" value="@Model[0].customers.customer_name" readonly/>
+            <input type="text" value="@Model[0].products.product_name" readonly />
+            <input type="text" value="@Model[0].products.product_price" readonly />
+            <input type="text" value="@Model[0].product_quantity" readonly />
+            
+            <form method="post">
+                <input type="hidden" name="cart_id"/>
+                <input type="hidden" name="order_status" value="0"/>
+                <input type="submit" class="btn btn-warning" value="Order Now">
+            </form>
+        </div>
+    </div>
+</div>
+

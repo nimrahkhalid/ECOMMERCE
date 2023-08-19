@@ -1,0 +1,16 @@
+Roles
+-----
+Admin
+Customer
+
+Tables
+------
+Admin(id,name,email,password,image)
+Customer(id,name,phone,email,password,country,city,address,gender,image)
+Category(id,name)
+Product(id,name,price,image,description,category_id)
+Cart(id,pid,quantity,cid,status)
+Feedback(id,username,message)
+FAQs(id,question,answer)
+Order(id,cart_id,status)
+

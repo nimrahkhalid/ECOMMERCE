@@ -1,0 +1,260 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main class="main">
+    <div class="mb-2"></div><!-- End .mb-2 -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 d-none d-xl-block">
+                <nav class="side-nav">
+                    <div class="sidenav-title">Browse Categories</div><!-- End .sidenav-title -->
+                    <ul class="menu-vertical">
+                        @Html.Partial("fetchCategoryList",ViewData["category"])
+                    </ul><!-- End .menu -->
+                </nav><!-- End .side-nav -->
+            </div><!-- End .col-lg-3 -->
+
+            <div class="col-lg-8 col-xl-6">
+                <div class="banner banner-overlay banner-lg  content-left">
+                    <a href="#">
+                        <img src="~/website/images/demos/demo-19/banners/banner-1.jpg" alt="Banner">
+                    </a>
+                    <div class="banner-content">
+                        <h4 class="banner-subtitle">Pre-order now</h4>
+                        <img src="~/website/images/demos/demo-19/banners/banner-1-title.png"
+                             alt="Banner 1 Title" width="217" height="54" class="mb-1">
+                        <a href="#" class="banner-link size-lg">
+                            Pre-Order Now<i class="icon-long-arrow-right"></i>
+                        </a>
+                    </div>
+                </div><!-- End .banner -->
+            </div><!-- End .col-lg-6 -->
+
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="banner banner-overlay banner-sm content-right">
+                    <a href="#">
+                        <img src="~/website/images/demos/demo-19/banners/banner-2.jpg" alt="Banner">
+                    </a>
+                    <div class="banner-content text-right">
+                        <h4 class="banner-subtitle">Weekend Offer</h4>
+                        <img class="banner-title-img"
+                             src="~/website/images/demos/demo-19/banners/banner-2-title.png" alt="Banner-2">
+                        <h4 class="banner-price">Save<span class="price">$19,99</span></h4>
+                        <a href="#" class="banner-link">Buy Now<i class="icon-long-arrow-right"></i></a>
+                    </div>
+                </div><!-- End .banner -->
+
+                <div class="banner banner-overlay d-none d-lg-block banner-sm content-right align-center">
+                    <a href="#">
+                        <img src="~/website/images/demos/demo-19/banners/banner-3.jpg" alt="Banner">
+                    </a>
+                    <div class="banner-content text-right">
+                        <img class="banner-title-img"
+                             src="~/website/images/demos/demo-19/banners/banner-3-title.png" alt="Banner-3">
+                        <h5 class="text-white">35% OFF</h5>
+                        <a href="#" class="banner-link">Buy Now<i class="icon-long-arrow-right"></i></a>
+                    </div>
+                </div><!-- End .banner -->
+            </div><!-- End .col-lg-3 -->
+        </div><!-- End .row -->
+    </div><!-- End .container -->
+
+
+
+    <div class="icon-boxes-container icon-boxes-separator bg-transparent">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="icon-box icon-box-side">
+                        <span class="icon-box-icon">
+                            <i class="icon-rocket"></i>
+                        </span>
+                        <div class="icon-box-content">
+                            <h3 class="icon-box-title">Free Shipping</h3><!-- End .icon-box-title -->
+                            <p>Orders $50 or more</p>
+                        </div><!-- End .icon-box-content -->
+                    </div><!-- End .icon-box -->
+                </div><!-- End .col-sm-6 col-lg-3 -->
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="icon-box icon-box-side">
+                        <span class="icon-box-icon">
+                            <i class="icon-rotate-left"></i>
+                        </span>
+
+                        <div class="icon-box-content">
+                            <h3 class="icon-box-title">Free Returns</h3><!-- End .icon-box-title -->
+                            <p>Within 30 days</p>
+                        </div><!-- End .icon-box-content -->
+                    </div><!-- End .icon-box -->
+                </div><!-- End .col-sm-6 col-lg-3 -->
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="icon-box icon-box-side">
+                        <span class="icon-box-icon">
+                            <i class="icon-info-circle"></i>
+                        </span>
+
+                        <div class="icon-box-content">
+                            <h3 class="icon-box-title">Get 20% Off 1 Item</h3><!-- End .icon-box-title -->
+                            <p>When you sign up</p>
+                        </div><!-- End .icon-box-content -->
+                    </div><!-- End .icon-box -->
+                </div><!-- End .col-sm-6 col-lg-3 -->
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="icon-box icon-box-side">
+                        <span class="icon-box-icon">
+                            <i class="icon-life-ring"></i>
+                        </span>
+
+                        <div class="icon-box-content">
+                            <h3 class="icon-box-title">We Support</h3><!-- End .icon-box-title -->
+                            <p>24/7 amazing services</p>
+                        </div><!-- End .icon-box-content -->
+                    </div><!-- End .icon-box -->
+                </div><!-- End .col-sm-6 col-lg-3 -->
+            </div><!-- End .row -->
+        </div><!-- End .container -->
+    </div><!-- End .icon-boxes-container -->
+
+    <div class="container">
+        <div class="heading heading-flex mb-2">
+            <div class="heading-left">
+                <h2 class="title mb-5">Our Products</h2><!-- End .title -->
+            </div><!-- End .heading-left -->
+
+            <div class="heading-right">
+                <a href="@Url.Action("fetchAllProducts","Customer")" class="title-link">
+                    View more products <i class="icon-long-arrow-right"></i>
+                </a>
+            </div><!-- End .heading-right -->
+        </div><!-- End .heading -->
+
+        <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow" data-toggle="owl"
+             data-owl-options='{
+                            "nav": false,
+                            "dots": true,
+                            "margin": 20,
+                            "loop": false,
+                            "responsive": {
+                                "0": {
+                                    "items":2
+                                },
+                                "480": {
+                                    "items":2
+                                },
+                                "768": {
+                                    "items":3
+                                },
+                                "992": {
+                                    "items":4
+                                },
+                                "1200": {
+                                    "items":5,
+                                    "nav": true
+                                }
+                            }
+                        }'>
+            <!-- Start .product -->
+            @Html.Partial("fetchProducts",ViewData["product"])
+            <!-- End .product -->
+        </div><!-- End .owl-carousel -->
+
+        <div class="mb-5"></div><!-- End .mb-4 -->
+    </div><!-- End .container -->
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-6 col-md-4">
+                <div class="banner banner-overlay banner-sm banner-ad content-left align-center">
+                    <a href="#">
+                        <img src="~/website/images/demos/demo-19/banners/banner-6.jpg" alt="Banner">
+                    </a>
+                    <div class="banner-content">
+                        <h4 class="banner-subtitle">Weekend Offer</h4>
+                        <img class="banner-title-img"
+                             src="~/website/images/demos/demo-19/banners/banner-6-title.png" alt="Banner-6">
+                        <h4 class="banner-price">
+                            <span class="off" style="font-weight: 600;">
+                                Save <span class="price">$19.99</span>
+                            </span>
+                        </h4>
+                        <a href="#" class="banner-link">Buy Now<i class="icon-long-arrow-right"></i></a>
+                    </div>
+                </div><!-- End .banner -->
+            </div><!-- End .col-md-4 -->
+
+            <div class="col-sm-6 col-md-4">
+                <div class="banner banner-overlay banner-sm banner-ad content-left align-center">
+                    <a href="#">
+                        <img src="~/website/images/demos/demo-19/banners/banner-7.jpg" alt="Banner">
+                    </a>
+                    <div class="banner-content">
+                        <h4 class="banner-subtitle" style="letter-spacing: 0.1em;">Amazing Deal on an</h4>
+                        <h2 class="banner-title mb-0" style="font-size: 3rem;">XBOX ONE</h2>
+                        <h4 class="banner-price">
+                            <span class="off" style="font-weight: 600;">Save $50</span>
+                        </h4>
+                        <a href="#" class="banner-link">Buy Now<i class="icon-long-arrow-right"></i></a>
+                    </div>
+                </div><!-- End .banner -->
+            </div><!-- End .col-md-4 -->
+
+            <div class="col-sm-6 col-md-4">
+                <div class="banner banner-overlay banner-sm banner-ad content-left align-center">
+                    <a href="#">
+                        <img src="~/website/images/demos/demo-19/banners/banner-8.jpg" alt="Banner">
+                    </a>
+                    <div class="banner-content">
+                        <h4 class="banner-price text-white mb-1">Save $29.00</h4>
+                        <img class="banner-title-img mb-2"
+                             src="~/website/images/demos/demo-19/banners/banner-8-title.png" alt="Banner-8">
+                        <a href="#" class="banner-link">Buy Now<i class="icon-long-arrow-right"></i></a>
+                    </div>
+                </div><!-- End .banner -->
+            </div><!-- End .col-md-4 -->
+        </div><!-- End .row -->
+    </div><!-- End .container -->
+
+    <div class="container">
+        <hr class="mt-0 mb-4">
+    </div><!-- End .container -->
+
+
+    <div class="mb-3"></div><!-- End .mb-3 -->
+
+    <div class="container">
+        <div class="cta cta-horizontal cta-horizontal-box bg-image mb-4"
+             style="background-image: url(~/website/images/demos/demo-19/bg-2.jpg);">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <h3 class="cta-title text-primary">Join Our Newsletter</h3><!-- End .cta-title -->
+                    <p class="cta-desc text-light">
+                        Subcribe to get information about products and coupons
+                    </p><!-- End .cta-desc -->
+                </div><!-- End .col-lg-5 -->
+
+                <div class="col-lg-7 d-flex justify-content-lg-end">
+                    <form action="#">
+                        <div class="input-group">
+                            <input type="email" class="form-control form-control-white"
+                                   placeholder="Enter your Email Address" aria-label="Email Adress" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary-white btn-rounded"
+                                        type="submit">
+                                    <span>Subscribe</span><i class="icon-long-arrow-right"></i>
+                                </button>
+                            </div><!-- .End .input-group-append -->
+                        </div><!-- .End .input-group -->
+                    </form>
+                </div><!-- End .col-lg-8 -->
+            </div><!-- End .row -->
+        </div><!-- End .cta -->
+    </div><!-- End .container -->
+</main><!-- End .main -->
+
+
